@@ -10,14 +10,21 @@
 
 <body class="page">
     <div class="wrapper">
-        <header class="header">
+        <header class="header" id="home">
             <div class="container header__container">
                 <div class="header__row-left">
-                    <a href="#0">
-                        <svg class="header__img">
-                            <use href="./assets/svg/LOGO.svg#logo"></use>
-                        </svg>
+                    <a class="logo-link" href="#home">
+                        <img class="header__img"
+                            src="./assets/svg/LOGO.png"
+                        >
                     </a>
+                    <div class="burger-menu">
+                        <div class="burger-icon">
+                          <span class="line"></span>
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                    </div>
                     <h1 class="title header__title">
                         <span class="title header__title-item animated">Your</span>
                         <span class="title header__title-item animated active">Personalized</span>
@@ -40,11 +47,11 @@
                         <div class="nav__content">
                             <h2 class="nav__title">TRANG CHỦ</h2>
                             <ul class="nav__list">
-                                <li class="nav__item"><a class="nav__item-link" href="#choose">COFFEE</a></li>
-                                <li class="nav__item"><a class="nav__item-link" href="#combo">PHIN MẠ MÀU</a></li>
-                                <li class="nav__item"><a class="nav__item-link" href="#giftset">COMBO PHIN PHÊ</a></li>
-                                <li class="nav__item"><a class="nav__item-link" href="#coffe">GIFTSET</a></li>
-                                <li class="nav__item"><a class="nav__item-link" href="#0">LIÊN HỆ</a></li>
+                                <li class="nav__item"><a class="nav__item-link" href="#coffe">COFFEE</a></li>
+                                <li class="nav__item"><a class="nav__item-link" href="#choose">PHIN MẠ MÀU</a></li>
+                                <li class="nav__item"><a class="nav__item-link" href="#combo">COMBO PHIN PHÊ</a></li>
+                                <li class="nav__item"><a class="nav__item-link" href="#giftset">GIFTSET</a></li>
+                                <li class="nav__item"><a class="nav__item-link" href="#home">LIÊN HỆ</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -52,7 +59,7 @@
             </div>
         </header>
 
-        <section class="coffe small_container" id="coffe">
+        <section class="coffe container" id="coffe">
             <p class="section__subtitle">Your Personalized Coffee</p>
             <h2 class="section__title">COFFEE BUILD YOUR BASE</h2>
             <div class="card_container">
@@ -104,11 +111,13 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="swiper__card">
-                                <img class="img__product" src="./assets/coffe-yellow.png" alt="Coffe" />
+                                <div class="img-container">
+                                    <img class="img__product" src="./assets/coffe-orange.png" alt="Coffe" />
+                                </div>
                                 <div class="card__desc">
-                                    <p class="card__prise">99.000</p>
-                                    <h3 class="card__title">REVO Morning</h3>
-                                    <p class="card__text">đắng, hậu ngọt, hương hoa</p>
+                                    <p class="card__prise">139.000</p>
+                                    <h3 class="card__title">REVO Origin</h3>
+                                    <p class="card__text">hậu ngọt, ít đắng, vị chua dâu</p>
                                     <div class="link__container">
                                         <button class="btn_buy">MUA NGAY</button>
                                         <a class="card__link-more">CHI TIẾT</a>
@@ -116,7 +125,9 @@
                                 </div>
                             </div>
                             <div class="swiper__card">
-                                <img class="img__product" src="./assets/coffe-orange.png" alt="Coffe" />
+                                <div class="img-container">
+                                    <img class="img__product" src="./assets/coffe-brown.png" alt="Coffe" />
+                                </div>
                                 <div class="card__desc">
                                     <p class="card__prise">139.000</p>
                                     <h3 class="card__title">REVO Origin</h3>
@@ -130,7 +141,9 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="swiper__card">
-                                <img class="img__product" src="./assets/coffe-blue.png" alt="Coffe" />
+                                <div class="img-container">
+                                    <img class="img__product" src="./assets/coffe-green.png" alt="Coffe" />
+                                </div>
                                 <div class="card__desc">
                                     <p class="card__prise">85.000</p>
                                     <h3 class="card__title">REVO Everyday</h3>
@@ -142,7 +155,9 @@
                                 </div>
                             </div>
                             <div class="swiper__card">
-                                <img class="img__product" src="./assets/coffe-brown.png" alt="Coffe" />
+                                <div class="img-container">
+                                    <img class="img__product" src="./assets/coffe-orange.png" alt="Coffe" />
+                                </div>
                                 <div class="card__desc">
                                     <p class="card__prise">75.000</p>
                                     <h3 class="card__title">REVO Đậm Đà</h3>
@@ -157,7 +172,9 @@
 
                         <div class="swiper-slide">
                             <div class="swiper__card">
-                                <img class="img__product" src="./assets/coffe-red.png" alt="Coffe" />
+                                <div class="img-container">
+                                    <img class="img__product" src="./assets/coffe-red.png" alt="Coffe" />
+                                </div>
                                 <div class="card__desc">
                                     <p class="card__prise">110.000</p>
                                     <h3 class="card__title">REVO Đậm</h3>
@@ -170,7 +187,9 @@
                             </div>
 
                             <div class="swiper__card">
-                                <img class="img__product" src="./assets/coffe-green.png" alt="Coffe" />
+                                <div class="img-container">
+                                    <img class="img__product" src="./assets/coffe-green.png" alt="Coffe" />
+                                </div>
                                 <div class="card__desc">
                                     <p class="card__prise">175.000</p>
                                     <h3 class="card__title">REVO Đậm Đà</h3>
@@ -185,20 +204,23 @@
 
                         <div class="swiper-slide">
                             <div class="swiper__card">
-                                <img class="img__product" src="./assets/coffe-yellow.png" alt="Coffe" />
+                                <div class="img-container">
+                                    <img class="img__product" src="./assets/coffe-yellow.png" alt="Coffe" />
+                                </div>
                                 <div class="card__desc">
-                                    <p class="card__prise">75.000</p>
-                                    <h3 class="card__title">REVO Đậm Đà</h3>
-                                    <p class="card__text">đậm đà, đắng, truyền thống</p>
+                                    <p class="card__prise">85.000</p>
+                                    <h3 class="card__title">REVO Everyday</h3>
+                                    <p class="card__text">cân bằng, hậu đắng, vị chocolate </p>
                                     <div class="link__container">
                                         <button class="btn_buy">MUA NGAY</button>
                                         <a class="card__link-more">CHI TIẾT</a>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="swiper__card">
-                                <img class="img__product" src="./assets/coffe-yellow.png" alt="Coffe" />
+                                <div class="img-container">
+                                    <img class="img__product" src="./assets/coffe-blue.png" alt="Coffe" />
+                                </div>
                                 <div class="card__desc">
                                     <p class="card__prise">75.000</p>
                                     <h3 class="card__title">REVO Đậm Đà</h3>
@@ -222,7 +244,6 @@
             <div class="container">
                 <p class="section__subtitle">Best Gift For Best Friend</p>
                 <h2 class="section__title">GIFTSET</h2>
-                <div class="medium">
                     <div class="slider-container">
                         <div class="pagination-buttons">
                             <button class="pagination-button" data-slide="0">1</button>
@@ -396,7 +417,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
 
         <section class="combo" id="combo">
@@ -404,11 +424,17 @@
                 <p class="section__subtitle">Your Personalized Coffee</p>
                 <h2 class="section__title">COMBO PHIN PHÊ</h2>
 
-                <div class="swiper swiper__combo">
+                <div class="swiper__product-cont ">
+
+                <div class="swiper swiper__product">
                     <div class="overlay"></div>
                     <div class="swiper-wrapper">
+                        
                         <div class="swiper-slide">
-                            <img class="combo__img" src="./assets/combo-brown.png" alt="Coffe set">
+                            
+                            <div class="img-container">
+                                <img class="combo__img" src="./assets/combo-blue.png" alt="Coffe set">
+                            </div>
                             <div class="card__desc">
                                 <p class="card__prise">147.000 <span class="old-prise"> 155.000 </span></p>
                                 <p class="card__title">Combo Revo Đậm Đà</p>
@@ -423,7 +449,9 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img class="combo__img" src="./assets/combo-blue.png" alt="Coffe set">
+                            <div class="img-container">
+                                <img class="combo__img" src="./assets/combo-red.png" alt="Coffe set">
+                            </div>
                             <div class="card__desc">
                                 <p class="card__prise">156.000 <span class="old-prise"> 165.000 </span></p>
                                 <p class="card__title">Combo Revo Everyday</p>
@@ -438,7 +466,9 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img class="combo__img" src="./assets/combo-red.png" alt="Coffe set">
+                            <div class="img-container">
+                                <img class="combo__img" src="./assets/combo-blue.png" alt="Coffe set">
+                            </div>
                             <div class="card__desc">
                                 <p class="card__prise">260.000 <span class="old-prise"> 275.000 </span></p>
                                 <p class="card__title">Combo Revo Honey</p>
@@ -454,7 +484,9 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <img class="combo__img" src="./assets/combo-green.png" alt="Coffe set">
+                            <div class="img-container">
+                                <img class="combo__img" src="./assets/combo-brown.png" alt="Coffe set">
+                            </div>
                             <div class="card__desc">
                                 <p class="card__prise">249.000 <span class="old-prise"> 265.000 </span></p>
                                 <p class="card__title">Combo Revo Morning</p>
@@ -469,7 +501,9 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img class="combo__img" src="./assets/combo-blue.png" alt="Coffe set">
+                            <div class="img-container">
+                                <img class="combo__img" src="./assets/combo-green.png" alt="Coffe set">
+                            </div>
                             <div class="card__desc">
                                 <p class="card__prise">180.000 <span class="old-prise"> 200.000 </span></p>
                                 <p class="card__title">Combo Revo Đậm</p>
@@ -488,6 +522,9 @@
                 </div>
 
             </div>
+
+        </div>
+
         </section>
         <footer class="footer">
             © Revo Coffee Việt Nam - 2018

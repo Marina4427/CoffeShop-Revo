@@ -2,20 +2,24 @@ import './styles/font.css';
 import './styles/global.css';
 import Swiper from 'swiper';
 import 'swiper/css';
-import {Navigation, Pagination} from 'swiper/modules';
+import {Navigation, Pagination, Autoplay} from 'swiper/modules';
 
 import './styles/index.css';
 import './styles/animation.css'
 
 const swiperProduct = new Swiper (".swiper__product", {
-  modules: [Navigation],
-  slidesPerView: 2.3,
+  modules: [Navigation, Autoplay],
+  slidesPerView: "auto",
   spaceBetween: 30,
   loop: true,
   speed: 1000,
   navigation: {
     nextEl: ".b-next",
-  },  
+  },
+  // autoplay: {
+  //   delay: 4000,
+  //   disableOnInteraction: false
+  // }
 });
 
 
@@ -46,17 +50,6 @@ swiper.on('slideChange', () => {
 });
 // Инициализация активной кнопки
 setActiveButton(0);
-
-const swiperCombo = new Swiper (".swiper__combo", {
-  modules: [Navigation],
-  slidesPerView: 3.5,
-  spaceBetween: 35,
-  loop: true,
-  speed: 1000,
-  navigation: {
-    nextEl: ".b-next",
-  },  
-});
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -91,4 +84,58 @@ document.addEventListener('DOMContentLoaded', function () {
       observer.observe(section); // Начинаем следить за каждой секцией
   });
 });
+
+
+// tablet
+document.addEventListener("DOMContentLoaded", function () {
+  const burgerMenu = document.querySelector(".burger-menu");
+  const nav = document.querySelector(".header__row-right");
+  const burgerIcon = document.querySelector(".burger-icon");
+  const headerImg = document.querySelector(".header__img");
+  const ImageMain = document.querySelector(".header");
+  const navLinks = document.querySelectorAll(".nav__item-link"); // Все ссылки в меню
+
+  // Функция закрытия меню с задержкой перед скроллом
+  function closeMenu(callback) {
+    document.body.classList.remove("blur");
+    [nav, burgerIcon, headerImg, ImageMain].forEach(el => el.classList.remove("open"));
+
+    // Ждем завершения анимации перед выполнением callback (скролл)
+    setTimeout(() => {
+      if (callback) callback();
+    }, 300);
+  }
+
+  // Открытие/закрытие меню при клике на бургер-иконку
+  burgerMenu.addEventListener("click", function () {
+    document.body.classList.toggle("blur");
+    [nav, burgerIcon, headerImg, ImageMain].forEach(el => el.classList.toggle("open"));
+  });
+
+  // Закрытие меню и скролл после задержки
+  navLinks.forEach(link => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // Останавливаем мгновенный переход
+
+      const targetId = this.getAttribute("href"); // Получаем ID секции
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        closeMenu(() => {
+          targetSection.scrollIntoView({ behavior: "smooth", block: "start" }); // Плавный скролл
+        });
+      }
+    });
+  });
+
+  // Закрытие меню при клике вне его области
+  document.addEventListener("click", function (event) {
+    if (!burgerMenu.contains(event.target) && !nav.contains(event.target)) {
+      closeMenu();
+    }
+  });
+});
+
+
+
 
